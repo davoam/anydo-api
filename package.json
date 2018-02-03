@@ -1,12 +1,20 @@
 {
   "name": "anydo-api",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Any.do unofficial API",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "keywords": [
+    "anydo",
+    "any.do",
+    "todo",
+    "todos",
+    "api",
+    "unofficial"
+  ],
+  "author": "David Stepanov <davstepanov@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "lodash": "^4.17.4",
