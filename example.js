@@ -1,4 +1,4 @@
-const Api = require('./lib/api');
+const Api = require('anydo-api');
 
 const api = new Api('your_email', 'your_password');
 
