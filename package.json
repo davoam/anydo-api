@@ -1,6 +1,6 @@
 {
   "name": "anydo-api",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Any.do unofficial API",
   "main": "index.js",
   "scripts": {

@@ -1,6 +1,10 @@
 # Any.do API (unofficial)
 This API allows to list and add tasks and also get auth token
 
+## Installation
+```bash
+npm install anydo-api
+```
 ## Example
 ```js
 const Api = require('./lib/api');
