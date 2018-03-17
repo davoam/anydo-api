@@ -99,6 +99,20 @@ class Api {
         models.task.items.push(task(options));
         return this.sync({models, updateSince: Date.now()});
     }
+
+    /**
+     * Add several tasks at once
+     *
+     * @param {object[]} tasks
+     * @param {string} tasks[].title
+     * @param {number|string} [tasks[].dueDate]
+     * @return {Promise<T>}
+     */
+    addTasks(tasks) {
+        const models = syncSample();
+        models.task.items = tasks.map(t => task(t));
+        return this.sync({models, updateSince: Date.now()})
+    }
 }
 
 module.exports = Api;
