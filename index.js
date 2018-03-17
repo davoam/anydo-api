@@ -91,7 +91,7 @@ class Api {
      *
      * @param {object} options
      * @param {string} options.title
-     * @param {number} [options.dueDate]
+     * @param {number|string} [options.dueDate]
      * @return {Promise<T>}
      */
     addTask(options) {
