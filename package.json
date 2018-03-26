@@ -4,7 +4,7 @@
   "description": "Any.do unofficial API",
   "main": "index.js",
   "scripts": {
-    "start": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "keywords": [
     "anydo",
@@ -20,5 +20,9 @@
     "lodash": "^4.17.4",
     "request": "^2.83.0",
     "request-promise-native": "^1.0.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davoam/anydo-api.git"
   }
 }

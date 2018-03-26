@@ -1,6 +1,4 @@
 node_modules
 .idea
 
-# LOCAL FILES
-
 example.local.js

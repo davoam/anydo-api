@@ -1,10 +1,14 @@
 const _ = require('lodash');
 const request = require('request-promise-native');
+
 const syncSample = require('./lib/syncSample');
 const task = require('./lib/Task');
 
 const API_URL = 'https://sm-prod2.any.do';
 
+/**
+ * @class
+ */
 class Api {
     constructor(email, password) {
         if (email && password) {
@@ -18,7 +22,7 @@ class Api {
      * @param {object} options
      * @param {string} options.email
      * @param {string} options.password
-     * @return {PromiseLike<T> | Promise<T>}
+     * @return {Promise<T>}
      */
     login(options) {
         const {email, password} = options;
