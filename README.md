@@ -28,6 +28,41 @@ api.addTasks(tasks)
 ```
 
 ## Methods
+* [Api](#Api)
+    * [.login(options)](#Api+login) ⇒ <code>Promise</code>
+    * [.sync([options])](#Api+sync) ⇒ <code>Promise</code>
+    * [.setToken(token)](#Api+setToken) ⇒ <code>Promise</code>
+    * [.addTask(options)](#Api+addTask) ⇒ <code>Promise</code>
+    * [.addTasks(tasks)](#Api+addTasks) ⇒ <code>Promise</code>
+    * [.deleteTask(object)](#Api+deleteTask) ⇒ <code>Promise</code>
+
+<a name="Api+login"></a>
+
+### api.login(options) ⇒ <code>Promise</code>
+Get auth token
+
+| Param | Type |
+| --- | --- |
+| options | <code>object</code> | 
+| options.email | <code>string</code> | 
+| options.password | <code>string</code> | 
+
+<a name="Api+sync"></a>
+
+### api.sync([options]) ⇒ <code>Promise</code>
+Sync tasks
+If it is invoked without options, it just returns all
+undone and not deleted tasks
+
+| Param | Type |
+| --- | --- |
+| [options] | <code>object</code> | 
+| [options.updateSince] | <code>number</code> | 
+| [options.includeDone] | <code>boolean</code> | 
+| [options.includeDeleted] | <code>boolean</code> | 
+| [options.models] | <code>object</code> | 
+
+<a name="Api+setToken"></a>
 
 ### api.setToken(token) ⇒ <code>Promise</code>
 Set token for current API instance
@@ -39,7 +74,7 @@ Set token for current API instance
 
 <a name="Api+addTask"></a>
 
-### api.addTask(options) ⇒ <code>Promise.&lt;T&gt;</code>
+### api.addTask(options) ⇒ <code>Promise</code>
 Add new task
 
 | Param | Type |
@@ -50,7 +85,7 @@ Add new task
 
 <a name="Api+addTasks"></a>
 
-### api.addTasks(tasks) ⇒ <code>Promise.&lt;T&gt;</code>
+### api.addTasks(tasks) ⇒ <code>Promise</code>
 Add several tasks at once
 
 | Param | Type |
@@ -61,13 +96,14 @@ Add several tasks at once
 
 <a name="Api+deleteTask"></a>
 
-### api.deleteTask(object)
+### api.deleteTask(object) ⇒ <code>Promise</code>
 Delete task
 
 | Param | Type |
 | --- | --- |
 | object | <code>object</code> | 
 | object.taskId | <code>string</code> | 
+
 
 
 ## CLI

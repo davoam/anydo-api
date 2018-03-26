@@ -22,7 +22,7 @@ class Api {
      * @param {object} options
      * @param {string} options.email
      * @param {string} options.password
-     * @return {Promise<T>}
+     * @return {Promise}
      */
     login(options) {
         const {email, password} = options;
@@ -49,7 +49,7 @@ class Api {
      * @param {boolean} [options.includeDone]
      * @param {boolean} [options.includeDeleted]
      * @param {object} [options.models]
-     * @return {Promise<T>}
+     * @return {Promise}
      */
     sync(options) {
         options = options || {};
@@ -96,7 +96,7 @@ class Api {
      * @param {object} options
      * @param {string} options.title
      * @param {number|string} [options.dueDate]
-     * @return {Promise<T>}
+     * @return {Promise}
      */
     addTask(options) {
         const models = syncSample();
@@ -110,7 +110,7 @@ class Api {
      * @param {object[]} tasks
      * @param {string} tasks[].title
      * @param {number|string} [tasks[].dueDate]
-     * @return {Promise<T>}
+     * @return {Promise}
      */
     addTasks(tasks) {
         const models = syncSample();
@@ -123,6 +123,7 @@ class Api {
      *
      * @param {object} object
      * @param {string} object.taskId
+     * @return {Promise}
      */
     deleteTask({taskId}) {
         if (!taskId) {
