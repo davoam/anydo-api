@@ -69,7 +69,7 @@ class Api {
                     },
                     body: JSON.stringify({models: options.models}),
                 })
-                    .then(res => JSON.parse(res));
+                .then(res => JSON.parse(res));
             })
     }
 
@@ -112,6 +112,27 @@ class Api {
         const models = syncSample();
         models.task.items = tasks.map(t => task(t));
         return this.sync({models, updateSince: Date.now()})
+    }
+
+    /**
+     * Delete task
+     *
+     * @param {object} object
+     * @param {string} object.taskId
+     */
+    deleteTask({taskId}) {
+        if (!taskId) {
+            throw new Error('Task id is undefined')
+        } else {
+            return this.loginPromise
+                .then(() => {
+                    return request.delete(`${API_URL}/me/tasks/${taskId}`, {
+                        headers: {
+                            'X-Anydo-Auth': this.authToken
+                        }
+                    });
+                });
+        }
     }
 }
 
