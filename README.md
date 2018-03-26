@@ -7,6 +7,10 @@ npm install anydo-api
 ```
 ## Example
 ```js
+const Api = require('anydo-api');
+
+const api = new Api('your_email', 'your_password');
+
 const tasks = [
     {title: 'from api today'},
     {title: 'from api tomorrow', dueDate: 'tomorrow'},
