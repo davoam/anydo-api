@@ -7,6 +7,7 @@ const tasks = [
     {title: 'from api tomorrow', dueDate: 'tomorrow'},
     {title: 'from api upcoming', dueDate: 'upcoming'},
     {title: 'from api someday', dueDate: null},
+    {title: 'from api to category', categoryId: 'yourCategoryId'}
 ];
 
 // create then delete tasks
