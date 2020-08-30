@@ -26,5 +26,9 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/davoam/anydo-api.git"
+  },
+  "devDependencies": {
+    "jsdoc-to-markdown": "^6.0.1",
+    "np": "^6.5.0"
   }
 }

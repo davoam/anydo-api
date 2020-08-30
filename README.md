@@ -33,11 +33,16 @@ api.addTasks(tasks)
 ```
 
 ## Methods
+<a name="Api"></a>
+
+## Api
+**Kind**: global class  
+
 * [Api](#Api)
     * [.login(options)](#Api+login) ⇒ <code>Promise</code>
     * [.sync([options])](#Api+sync) ⇒ <code>Promise</code>
     * [.setToken(token)](#Api+setToken) ⇒ <code>Promise</code>
-    * [.addTask(options)](#Api+addTask) ⇒ <code>Promise</code>
+    * [.addTask(options)](#Api+addTask) ⇒ <code>Promise</code>~~
     * [.addTasks(tasks)](#Api+addTasks) ⇒ <code>Promise</code>
     * [.deleteTask(object)](#Api+deleteTask) ⇒ <code>Promise</code>
 
@@ -45,6 +50,8 @@ api.addTasks(tasks)
 
 ### api.login(options) ⇒ <code>Promise</code>
 Get auth token
+
+**Kind**: instance method of [<code>Api</code>](#Api)  
 
 | Param | Type |
 | --- | --- |
@@ -59,6 +66,8 @@ Sync tasks
 If it is invoked without options, it just returns all
 undone and not deleted tasks
 
+**Kind**: instance method of [<code>Api</code>](#Api)  
+
 | Param | Type |
 | --- | --- |
 | [options] | <code>object</code> | 
@@ -72,6 +81,8 @@ undone and not deleted tasks
 ### api.setToken(token) ⇒ <code>Promise</code>
 Set token for current API instance
 
+**Kind**: instance method of [<code>Api</code>](#Api)  
+
 | Param | Type |
 | --- | --- |
 | token | <code>object</code> | 
@@ -79,36 +90,45 @@ Set token for current API instance
 
 <a name="Api+addTask"></a>
 
-### api.addTask(options) ⇒ <code>Promise</code>
+### api.addTask(options) ⇒ <code>Promise</code>~~
+***Deprecated***
+
 Add new task
+
+**Kind**: instance method of [<code>Api</code>](#Api)  
 
 | Param | Type |
 | --- | --- |
 | options | <code>object</code> | 
 | options.title | <code>string</code> | 
 | [options.dueDate] | <code>number</code> \| <code>string</code> | 
+| [options.categoryId] | <code>string</code> | 
 
 <a name="Api+addTasks"></a>
 
 ### api.addTasks(tasks) ⇒ <code>Promise</code>
 Add several tasks at once
 
+**Kind**: instance method of [<code>Api</code>](#Api)  
+
 | Param | Type |
 | --- | --- |
 | tasks | <code>Array.&lt;object&gt;</code> | 
 | tasks[].title | <code>string</code> | 
 | [tasks[].dueDate] | <code>number</code> \| <code>string</code> | 
+| [tasks[].categoryId] | <code>string</code> | 
 
 <a name="Api+deleteTask"></a>
 
 ### api.deleteTask(object) ⇒ <code>Promise</code>
 Delete task
 
+**Kind**: instance method of [<code>Api</code>](#Api)  
+
 | Param | Type |
 | --- | --- |
 | object | <code>object</code> | 
 | object.taskId | <code>string</code> | 
-
 
 
 ## CLI

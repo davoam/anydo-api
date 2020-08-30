@@ -96,6 +96,10 @@ class Api {
      * @param {object} options
      * @param {string} options.title
      * @param {number|string} [options.dueDate]
+     * @param {string} [options.categoryId]
+     *
+     * @deprecated use addTasks instead
+     *
      * @return {Promise}
      */
     addTask(options) {
@@ -110,6 +114,7 @@ class Api {
      * @param {object[]} tasks
      * @param {string} tasks[].title
      * @param {number|string} [tasks[].dueDate]
+     * @param {string} [tasks[].categoryId]
      * @return {Promise}
      */
     addTasks(tasks) {
