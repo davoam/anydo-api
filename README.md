@@ -42,7 +42,7 @@ api.addTasks(tasks)
     * [.login(options)](#Api+login) ⇒ <code>Promise</code>
     * [.sync([options])](#Api+sync) ⇒ <code>Promise</code>
     * [.setToken(token)](#Api+setToken) ⇒ <code>Promise</code>
-    * [.addTask(options)](#Api+addTask) ⇒ <code>Promise</code>~~
+    * [.addTask(options)](#Api+addTask) ⇒ <code>Promise</code>
     * [.addTasks(tasks)](#Api+addTasks) ⇒ <code>Promise</code>
     * [.deleteTask(object)](#Api+deleteTask) ⇒ <code>Promise</code>
 
@@ -101,7 +101,7 @@ Add new task
 | --- | --- |
 | options | <code>object</code> | 
 | options.title | <code>string</code> | 
-| [options.dueDate] | <code>number</code> \| <code>string</code> | 
+| [options.dueDate] | <code>number</code> | <code>string</code> | 
 | [options.categoryId] | <code>string</code> | 
 
 <a name="Api+addTasks"></a>
@@ -115,7 +115,7 @@ Add several tasks at once
 | --- | --- |
 | tasks | <code>Array.&lt;object&gt;</code> | 
 | tasks[].title | <code>string</code> | 
-| [tasks[].dueDate] | <code>number</code> \| <code>string</code> | 
+| [tasks[].dueDate] | <code>number</code> | <code>string</code> | 
 | [tasks[].categoryId] | <code>string</code> | 
 
 <a name="Api+deleteTask"></a>
